@@ -1,4 +1,5 @@
 name: Build & Deploy TiddlyWiki
+
 on:
   push:
     branches: [ "main" ]
@@ -6,9 +7,13 @@ on:
   schedule:
     - cron: "0 10 * * *"  # optional daily build (UTC)
 
+permissions:
+  contents: write   # 让 GITHUB_TOKEN 可写 gh-pages
+
 jobs:
   build-deploy:
     runs-on: ubuntu-latest
+
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -37,13 +42,16 @@ jobs:
           publish_dir: output
           publish_branch: gh-pages
 
+      # ---- OneDrive 镜像（可选）----
       - name: Setup rclone (optional OneDrive mirror)
         if: ${{ secrets.RCLONE_CONF_BASE64 != '' }}
+        env:
+          RCLONE_CONF_BASE64: ${{ secrets.RCLONE_CONF_BASE64 }}
         run: |
           sudo -n apt-get update
           sudo -n apt-get install -y rclone
           mkdir -p ~/.config/rclone
-          echo "${{ secrets.RCLONE_CONF_BASE64 }}" | base64 -d > ~/.config/rclone/rclone.conf
+          echo "${RCLONE_CONF_BASE64}" | base64 -d > ~/.config/rclone/rclone.conf
 
       - name: Copy to OneDrive
         if: ${{ secrets.RCLONE_CONF_BASE64 != '' }}
