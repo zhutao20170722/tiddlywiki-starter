@@ -1,0 +1,12 @@
+created: 20220127035045354
+modified: 20220803125446886
+tags: 
+title: $:/mysettings/backup
+type: text/vnd.tiddlywiki
+
+\define sortf() [<currentTiddler>trim[backup]trim[Backup]split[-]last[]trim[]]
+\whitespace trim
+
+<$list filter="[prefix[backup]] [prefix[Backup]] +[sortsub<sortf>] :filter[subfilter<sortf>minlength[3]]">
+<$link to=<<currentTiddler>>><span title=<<currentTiddler>>><$text text={{{ [subfilter<sortf>]  }}} /></span></$link><br>
+</$list>

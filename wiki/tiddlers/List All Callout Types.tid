@@ -1,0 +1,11 @@
+created: 20230103123013226
+modified: 20230103140346157
+tags: doc
+title: List All Callout Types
+type: text/vnd.tiddlywiki
+
+<$list filter="note abstract summary tldr info todo tip hint important success check done question help faq warning caution attention failure fail missing danger error bug example quote primary secondary dark" counter=n>
+
+<$macrocall $name=callout type=<<currentTiddler>> src=<<.lorem>> title={{{ "Callout" [<n>pad[2]addsuffix[.]] [<currentTiddler>titlecase[]] :and[join[ ]] }}}/>
+
+</$list>

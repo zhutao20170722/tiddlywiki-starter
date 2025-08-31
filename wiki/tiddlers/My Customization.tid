@@ -1,0 +1,22 @@
+created: 20220710095824803
+modified: 20220808070553645
+tags: 
+title: My Customization
+type: text/vnd.tiddlywiki
+
+!! Task Explorer
+<<<
+This tool has been derived from Thinkup
+
+<$list filter="""
+[[Idea and Todo List]]
+$:/config/ShortcutInfo/new-task
+$:/config/shortcuts/new-task
+$:/mysettings/actions/new-task
+$:/plugins/kookma/thinkup/images/tasks
+Task
+Done
+$:/plugins/kookma/thinkup/styles/task-done-button.css
+$:/plugins/kookma/thinkup/viewtemplates/task-button
+""" template="$:/core/ui/ListItemTemplate"/>
+<<<

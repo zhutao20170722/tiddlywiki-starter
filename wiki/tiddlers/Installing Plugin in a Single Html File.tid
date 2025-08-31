@@ -1,0 +1,26 @@
+created: 20211015141129561
+modified: 20211024090912018
+tags: doc
+title: Installing Plugin in a Single Html File
+type: text/vnd.tiddlywiki
+
+\import [[Plugin Data]]
+
+Tiddlywiki as a single html file (like //emtpy.html//) is the most common form of Tiddlywiki in use. To install the plugin on a single html file, follow any of the below procedures.
+
+;I. Drag and drop
+The simplest method, also called ''standalone configuration'', is the drag and drop method.
+
+# Open your Tiddlywiki in a browser
+# Drag and drop <<pluginTiddler>> into your wiki
+# Save and reload your wiki
+
+
+;II. Use plugin library
+Another simple method is to have the ''Kookma Plugin Library '' which acts exactly like Official Plugin Library
+
+# Drag and drop [[$:/config/KookmaPluginLibrary]] into your wiki
+# In your wiki, open [[$:/ControlPanel]], ''Plugins'' tab and the click on big button ''Get more plugins''
+# Click open library under ''Kookma Plugin Library''
+# Find ''<<pluginName>>'' plugin, and click install, or reinstall if you update ''<<pluginName>>''
+# Save and reload your wiki

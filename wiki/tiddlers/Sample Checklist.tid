@@ -1,0 +1,15 @@
+created: 20220808065835879
+modified: 20220808065955538
+tags: exclude
+title: Sample Checklist
+type: text/vnd.tiddlywiki
+
+This is only for demonstration. See the [[ToDo]] in sidebar.
+
+<<checklist>>
+
+
+@@.todo
+[ ] Check all excluded tiddler
+[ ] This is a todo for demonstration purpose
+@@

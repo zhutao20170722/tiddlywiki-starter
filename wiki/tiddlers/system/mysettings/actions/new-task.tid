@@ -1,0 +1,13 @@
+created: 20220710091944373
+key: ((new-task))
+modified: 20220808070541341
+tags: $:/tags/KeyboardShortcut
+title: $:/mysettings/actions/new-task
+type: text/vnd.tiddlywiki
+
+\import [[Idea and Todo List]]
+	
+	
+<$navigator story="$:/StoryList" history="$:/HistoryList" openLinkFromInsideRiver={{$:/config/Navigation/openLinkFromInsideRiver}} openLinkFromOutsideRiver={{$:/config/Navigation/openLinkFromOutsideRiver}} relinkOnRename={{$:/config/RelinkOnRename}}>
+<<createTask>>
+</$navigator>

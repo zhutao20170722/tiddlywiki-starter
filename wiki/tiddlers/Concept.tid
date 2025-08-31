@@ -1,0 +1,11 @@
+created: 20221226174430772
+modified: 20221227023649726
+tags: doc Contents tutorial
+title: Concept
+type: text/vnd.tiddlywiki
+
+* [[Shiraz|https://kookma.github.io/TW-Shiraz]] is a small Tiddlywiki framework
+* [[Shiraz|https://kookma.github.io/TW-Shiraz]] has many features including styles, macros, extended markups
+
+
+Callouts also known as admonitions, are an excellent choice for including side content without significantly interrupting the document flow. Shiraz callouts are inspired and taken from [[MkDocs|https://squidfunk.github.io/mkdocs-material/reference/admonitions/]] and provides several different types of admonitions and allows for the inclusion of arbitrary content.

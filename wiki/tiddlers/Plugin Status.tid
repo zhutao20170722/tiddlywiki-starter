@@ -1,0 +1,7 @@
+created: 20190315074043002
+modified: 20211024052743903
+tags: doc
+title: Plugin Status
+type: text/vnd.tiddlywiki
+
+<<dbadge Tiddlywiki 5.2.0+ primary>> <<dbadge License MIT success>> <<dbadge Release "{{$:/plugins/kookma/shiraz-callout!!version}}" warning>> <<dbadge Status "in progress" danger>>

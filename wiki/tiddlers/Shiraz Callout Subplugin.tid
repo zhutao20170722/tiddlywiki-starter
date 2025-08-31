@@ -1,0 +1,38 @@
+created: 20180818170954023
+modified: 20221227134815512
+tags: start doc
+title: Shiraz Callout Subplugin
+type: text/vnd.tiddlywiki
+
+\import [[Plugin Data]]
+\define output(p)
+<$wikify text=<<__p__>> name=result mode=block output="html">
+<<result>>
+</$wikify>
+\end
+
+{{Plugin Status}}
+
+<span style="float:right;width:96px">{{$:/favicon.ico}}</span>
+
+!! What is <<plugindisplayName>> subplugin?
+<<<
+<$macrocall $name=find text={{{ [<pluginReadme>get[text]] }}} begin="
+" end=";" mode="first" output="output"/>
+
+<<alert warning "Callout is used to describe a short piece of text, set in a different format than the rest of the page and intended to attract attention." width:"80%">>
+
+<<<
+
+!! Tutorials
+>The [[Shiraz Callout Tutorial]] is the starting point to learn more about plugin features, help, demo and examples. See below for online pages.
+
+!! Code and demo
+
+* Demo: <<plugindemoUrl>>
+* Code: <<plugincodeUrl>>
+
+<$list filter="[tag[doc]tag[info]has[text]!has[draft.of]]">
+<h2>{{!!title}}</h2>
+<blockquote><$transclude tiddler=<<currentTiddler>> mode=block/></blockquote>
+</$list>

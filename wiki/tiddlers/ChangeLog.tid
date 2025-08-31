@@ -1,0 +1,39 @@
+created: 20200312083811789
+modified: 20230103140441588
+tags: doc
+title: ChangeLog
+type: text/vnd.tiddlywiki
+
+!! Release 0.8.0
+* ''Dec 29th, 2023''
+* [NEW] Updated to TiddlyWiki 5.3.3
+
+!! Release 0.7.0
+* ''Jun 15th, 2023''
+* [FIXED] To remove the default arrow comew with summary tag in Safari browser. See [[https://talk.tiddlywiki.org/t/shiraz-plugin-update-2-5-4-2-8-1/4556/27]]
+
+!! Release 0.6.0
+* ''Jan 3rd, 2023''
+* [NEW] Callout macros (both static and collapsible) can handle nesting
+* [NEW] Primary, secondary and dark types are added to support Shiraz contextual colors
+* [FIXED] styles to support nesting
+* [FIXED] added more examples
+
+!! Release 0.5.2 
+* ''Dec 27th, 2022''
+* [NEW] Callout macros can handle a tiddler as source input
+* [FIXED] Styles for callout-details improved
+* [FIXED] Documentation improved
+
+
+!! Release 0.5.0 
+* ''Dec 26th, 2022''
+* [NEW] Stable public release
+* [NEW] Documentation added
+* [NEW] Transition to collapsible callout
+* [NEW] Clean CSS
+* [NEW] Add transition to callout-collapsible (reveal content and chevron)
+
+!! Release 0.1.0 
+* ''Dec 18th, 2022''
+* [NEW] Initial implementation

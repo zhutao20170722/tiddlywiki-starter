@@ -1,0 +1,13 @@
+created: 20220829163648335
+due-date: 
+modified: 20220829163752392
+priority: normal
+status: 
+tags: Task
+title: Delete Created and Modified Dates
+type: text/vnd.tiddlywiki
+
+Befor release run
+
+* Turn off timestamp
+* [[Delete Created and Modified Fields]]

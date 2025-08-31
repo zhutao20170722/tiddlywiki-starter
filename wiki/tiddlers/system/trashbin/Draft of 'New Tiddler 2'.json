@@ -1,0 +1,9 @@
+{
+    "created": "20221227085148472",
+    "text": "<<slider label:\"Simple text\"  src:\"This is a simple test!\">>\n\n<<callout+ type:\"\" title:\"Simple text\" class:\"bg-transparent\"\nsrc:\"<div>\n\nThe code is given here\n\n* one\n* two\n</div>\n\"\n\n>>\n\n\n<<alert primary \nsrc:\"\"\"\nThe code is given here\n\n```\ndef fun(x):\n  return 2x;\n```\n\n\"\"\"\n\n>>",
+    "draft.title": "New Tiddler 2",
+    "tags": "",
+    "title": "Draft of 'New Tiddler 2'",
+    "draft.of": "New Tiddler 2",
+    "modified": "20221227091608660"
+}

@@ -1,0 +1,39 @@
+created: 20221227032527729
+modified: 20230103135308703
+tags: doc
+title: Callout Types
+type: text/vnd.tiddlywiki
+
+Callout has several types. Some are aliases of others. These are
+
+* note (aliases: primary)
+* abstract (aliases: summary, tldr)
+* info
+* todo
+* tip (aliases: hint, important)
+* success (aliases: check, done)
+* question (aliases: help, faq)
+* warning (aliases: caution, attention)
+* failure (aliases: fail, missing)
+* danger (aliases: error)
+* bug
+* example
+* quote (aliases: cite, secondary)
+
+
+!! Shiraz contextual colors
+* Shiraz uses Bootstrap 5 as CSS framework
+* Bootstrap has 8 contextual colors and except light all other are supported in Shiraz callout
+
+** primary
+** secondary
+** success
+** info
+** warning
+** danger
+** light
+** dark
+
+!! Remarks
+* Not all types are required in real life, but aliases and icons give flexibility to create callouts with different tastes
+* See the list of all callouts in action [[List All Callout Types]]

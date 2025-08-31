@@ -1,0 +1,9 @@
+created: 20180907045232431
+modified: 20221227135016077
+tags: start doc
+title: Shiraz Callout Tutorial
+type: text/vnd.tiddlywiki
+
+Callout is used to describe a short piece of text set in a different format than the rest of the page and intended to attract attention.
+
+<<tabs tabsList:"[tag[tutorial]!tag[advanced]!has[draft.of]]" default:"Concept" class:"tc-vertical" template:"$:/tabs/tabTemplate" explicitState:"$:/state/tab-plugin-tutorial">>

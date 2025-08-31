@@ -1,0 +1,45 @@
+created: 20230103101019727
+modified: 20230103101650324
+tags: doc
+title: demo/nesting-callouts
+type: text/vnd.tiddlywiki
+
+While too many nestings is not recommended, but there are occations when you like to have some nesting. The `callout` macro allows to simply nest callouts.
+
+!! Example
+The below example shows two level of nesting. Note that using complex wikitext inside src parameter is allowed, but one must take care of suitable quotation marks for passing complex wikitext.
+
+
+<<code src:'<<callout info status:open src:"""
+
+<<callout danger src:"I am the first child here." status:open>>
+<<callout quote src:"Hi Mohammad">>
+
+The list of documents tiddlers:
+
+<$list filter="[tag[doc]]">
+
+</$list>
+'>>
+
+
+Will produce
+
+<<callout info status:open src:"""
+
+<<callout danger src:"I am the first child here." status:open>>
+<<callout quote src:"Hi Mohammad">>
+
+The list of documents tiddlers:
+
+<$list filter="[tag[doc]]">
+
+</$list>
+
+""">>
+
+''Remarks''
+
+* The outer callout uses `src:'...'` for passing src parameter
+* The inner callout uses `src:"..."` for passing src parameter
+* Tiddlywiki donot allow to pass `"` inside `".."` and `'` inside `'...'`

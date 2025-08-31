@@ -1,0 +1,13 @@
+created: 20230103101908117
+due-date: 
+modified: 20250730083251850
+priority: normal
+status: rework
+tags: Task
+title: Add more classes to callout
+type: text/vnd.tiddlywiki
+
+* I think all shiraz classes shall be supported
+* Also other classes can be removed
+
+What about using dictionary tiddlers

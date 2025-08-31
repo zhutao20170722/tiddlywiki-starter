@@ -1,0 +1,8 @@
+{
+    "created": "20221227124553444",
+    "text": ".callout-content:after + p {\nmargin:-10px;\n}",
+    "tags": "$:/tags/Stylesheet",
+    "title": "style/callout-content+p",
+    "modified": "20221227124715657",
+    "type": "text/css"
+}

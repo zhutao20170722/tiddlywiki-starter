@@ -1,0 +1,21 @@
+created: 20210323042919319
+modified: 20221226174204063
+tags: 
+title: $:/config/EmptyStoryMessage
+type: text/vnd.tiddlywiki
+
+\define randomTiddler(filter, label)
+<$set name=r1 value=<<now XXX>>>
+<$set name=r2 filter="[<r1>splitregexp:title[]rest[]join[]]" >
+<$set name=nth filter="""$filter$ +[count[]multiply<r2>divide[100]ceil[]]""">
+<$link to={{{ [subfilter<__filter__>nth<nth>] ~[subfilter<__filter__>first[]] }}}>$label$</$link>
+</$set>
+</$set>
+</$set>
+\end
+<!-- 
+randomTiddler returns a number between 0 - 999 
+if your tiddler is more than 999 then this is not a good solution
+-->
+
+[[Tutorial|Shiraz Callout Tutorial]] | [[Idea and Todo List]] | [[ChangeLog]] | {{$:/kookma/today-journal}}

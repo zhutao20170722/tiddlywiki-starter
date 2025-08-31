@@ -1,0 +1,10 @@
+{
+    "created": "20221227092245085",
+    "text": "\\rules except dash\n<style>\n:root{\n--callout-color:yellow;\n}\n</style>\n<<callout+ warning src:\"text-primary\" class:\"text-warning\">>\n\n<$macrocall $name=callout src=\"Test tiddler cc\" class=\"text-info border-1 border-danger\" />\n\n<$macrocall $name=details src={{demo/sample-content}} label=One/>\n\n\n<$macrocall $name=details label=Two src=\"I am calling you.\n\n```python\nreturn x;\n```\n\"/>\n\n<$macrocall $name=callout title=Two src=\"I am calling you.\n\n```python\nreturn x;\n```\n\"/>",
+    "tags": "",
+    "title": "New Tiddler 2",
+    "modified": "20221227131448507",
+    "type": "text/vnd.tiddlywiki",
+    "revision": "4",
+    "bag": "default"
+}

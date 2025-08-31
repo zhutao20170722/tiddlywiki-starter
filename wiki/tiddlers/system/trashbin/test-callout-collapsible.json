@@ -1,0 +1,10 @@
+{
+    "created": "20221227125612926",
+    "text": "<<callout+ warning src:\"I am an inline text\">>\n\n<<callout+ info src:\"demo/sample-content\" title:\"Read from a tiddler\">>\n\n<<callout+ danger src:\"TestTid\n\n* One\n* Two\n\n```\ndef fun(x):\n hey;\n``` \n\n\">>",
+    "tags": "",
+    "title": "test-callout-collapsible",
+    "modified": "20221227132015231",
+    "type": "text/vnd.tiddlywiki",
+    "revision": "8",
+    "bag": "default"
+}

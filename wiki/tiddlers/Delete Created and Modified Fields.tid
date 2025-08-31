@@ -1,0 +1,21 @@
+created: 20220823055616446
+modified: 20220829164128397
+tags: 
+title: Delete Created and Modified Fields
+type: text/vnd.tiddlywiki
+
+\import [[Plugin Data]]
+
+\define pluginFilter() 
+[[$:/config/ThirdFlow/plugins/$(pluginTiddler)$]get[additional-tiddlers]enlist-input[]]
+[prefix<pluginTiddler>]
+[<pluginName>]
+\end
+
+<$button> Remove creater, modifier, created, modified
+<$list filter=<<pluginFilter>> >
+<$action-deletefield creator modifier created modified/>
+</$list>
+</$button>
+
+<$list filter=<<pluginFilter>> template="$:/core/ui/ListItemTemplate"/>

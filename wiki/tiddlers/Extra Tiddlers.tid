@@ -1,0 +1,33 @@
+created: 20220809195247511
+modified: 20220810041956051
+tags: 
+title: Extra Tiddlers
+type: text/vnd.tiddlywiki
+
+\import [[Plugin Data]]
+\define plugin-config() $:/config/ThirdFlow/plugins/$(pluginTiddler)$
+
+\define newName() "system\$(currentTiddler)$.tid", `
+
+<div style="font-family:Consolas;padding:5px;background-color:#F1E4AD">
+<$set name=additional-tiddlers tiddler=<<plugin-config>> field="additional-tiddlers">
+
+<$list filter=<<additional-tiddlers>> >
+<$list filter="""[<currentTiddler>is[system]removeprefix[$:/]split[/]join[\]]""">
+<$text text=<<newName>> /><br/>
+</$list>
+<!-- Non system tiddlers -->
+<$list filter="""[<currentTiddler>!is[system]split[/]join[\]addsuffix[.tid]]""">
+<$text text={{{ [["]] [<currentTiddler>]  [[", `]] +[join[]]}}} /><br/>
+</$list>
+</$list>
+</$set>
+</div>
+
+;Remarks
+:These are the list of extra tiddlers to be packed with plugin
+: Open `update_all.ps1` in scripts folder under plugin folder
+: Copy the list of files above in line 68 for `$extraFiles = `
+: Remove the last line ``, ` `` 
+
+<<alert dark "Warning: Extra tiddler does not correctly handle JSON, Dictionary tiddler. These tiddler creates `.meta` file. So manually add these tiddlers to `update_all.ps1`">>

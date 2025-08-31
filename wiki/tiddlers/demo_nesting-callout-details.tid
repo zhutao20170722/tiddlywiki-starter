@@ -1,0 +1,53 @@
+created: 20230103100104066
+modified: 20230103121111055
+tags: doc
+title: demo/nesting-callout-details
+type: text/vnd.tiddlywiki
+
+While too many nesting is not recommended, but there are occations when you like to have some nesting. The `details-callout` macro allows to simply nest callouts.
+
+!! Example
+The below example shows two level of nesting. Note that using complex wikitext inside src parameter is allowed, but one must take care of suitable quotation marks for passing complex wikitext.
+
+
+<<code src:'<<callout-details example status:open src:"""
+
+<<callout-details warning src:"I am the first child here." status:open>>
+
+<<callout-details tip src:"Hi Mohammad">>
+
+The list of documents tiddlers:
+
+<$list filter="[tag[doc]]">
+
+</$list>
+
+* One
+* Two
+* Three
+
+End of complex text.
+""">>
+'>>
+
+
+Will produce
+
+<<callout-details example status:open src:"""
+
+<<callout-details warning src:"I am the first child here." status:open>>
+
+<<callout-details tip src:"Hi Mohammad">>
+
+The list of documents tiddlers:
+
+<$list filter="[tag[doc]]">
+
+</$list>
+
+* One
+* Two
+* Three
+
+End of complex text.
+""">>

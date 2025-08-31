@@ -1,0 +1,62 @@
+caption: Callout details macro
+created: 20221227133339460
+modified: 20230103101842459
+tags: Macros doc
+title: Macros/Callout-details
+type: text/vnd.tiddlywiki
+
+!! Callout details macro
+Callout is used to describe a short piece of text set in a different format than the rest of the page and intended to attract attention. The `callout-details` is a collapsible one, it uses Html 5 `details` element to show/hide its content on demand.
+
+!! Syntax
+```
+<<callout-details type:"note" src:"" title:"" status:"" width:"100%" class:"">>
+```
+
+!! Content and attributes
+|!Attributes |!Type |!Description |
+|type |optional|a callout contextual classes (e.g. example, note, quote, question, bug,...). The default value is `note`. See [[Callout Types]] for all supported types. This is a casesensitive attribute.|
+|src    |required |the text to be shown as callout content. The src value can be a tiddler `title`, callout extracts the tiddler text field and displays it|
+|title  |optional |a text to be shown as callout title (e.g. label, or caption of callout). The default is the type of callout, for example `Note` |
+|status |optional |the initial status of callout-details. Default value is empty means `closed`. The other value is `open`|
+|width  |optional |the width of element, default is `100%`|
+|class  |optional |extra css class e.g for adding text color, etc.|
+
+;Remarks
+:Callout supports different types, see [[Callout Types]] for details.
+:If src is empty, then only the caption will be shown.
+:If title is empty the type is used as title an it is shown in titlecase format
+:If an exisiting tiddler title is passed as src, the content of that tiddler is extracted and is displayed as callout content
+
+
+
+!! Example
+<$macrocall $name="wikitext-example" 
+src="""<<callout-details note "A note callout block with a width of 60%." width:60%>>
+<<callout-details example "Example callout" width:60%>>
+<<callout-details quote "Quote callout" width:60%>>
+<<callout-details question "Question callout" width:60%>>
+<<callout-details todo "Todo callout" width:60%>>
+<<callout-details error "Error callout" width:60%>>
+<<callout-details warning "Warning callout" width:60%>>
+<<callout-details tip "A tip callout with open initial status" width:60% status:open>>
+"""/>
+
+!! Pass tiddler title
+If an exisiting tiddler title is passed to `src`, callout-details will extract its content and display it.
+
+<$macrocall $name="wikitext-example" 
+src="""<<callout-details type:tip src:"demo/sample-content" title:"Sample tiddler">>
+"""/>
+
+!! Use extra class
+The below example adds a primary (blue) text color using the extra class `text-primary`.
+
+<$macrocall $name="wikitext-example" 
+src="""<<callout-details note src:"Blue colored note callout" class:"text-primary" status:open>>
+"""/>
+
+See more examples at
+
+* [[demo/callout-advanced]] for callout macro. The same examples can be used with callout-details.
+* [[demo/nesting-callout-details]] for nesting callout-details

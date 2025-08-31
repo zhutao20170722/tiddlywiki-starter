@@ -1,0 +1,7 @@
+created: 20200324055355701
+modified: 20201210113345128
+tags: $:/tags/Macro
+title: $:/config/PublishFilter
+type: text/vnd.tiddlywiki
+
+\define publishFilter() -[prefix[$:/temp]]

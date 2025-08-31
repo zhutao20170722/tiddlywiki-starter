@@ -1,0 +1,19 @@
+created: 20211024055333106
+modified: 20211024055923751
+tags: 
+title: ThirdFlow Plugin Maker
+type: text/vnd.tiddlywiki
+
+!! Rapid plugin maker
+This edition of Tiddlywiki combines several tools for rapid development of plugins under Node.js but in browser. It includes:
+
+* ~ThirdFlow plugin
+* Kookma plugin library
+* Plugin documentation tools
+
+!! History
+;Oct 24, 2021
+: new Task
+: new [[Plugin Data]]
+: new [[Install]] documentation
+: new empty story links

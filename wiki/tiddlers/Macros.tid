@@ -1,0 +1,7 @@
+created: 20190912115757399
+modified: 20221227134503751
+tags: doc Contents tutorial
+title: Macros
+type: text/vnd.tiddlywiki
+
+<<tabs tabsList:"[tag[Macros]tag[doc]!has[draft.of]]" default:"Macros/Callout" class:"tc-horizontal" template:"$:/tabs/tabTemplate" explicitState:"$:/state/tab-one">>

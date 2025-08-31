@@ -1,0 +1,10 @@
+{
+    "created": "20221227111529685",
+    "text": "<<callout warning src:\"I am a Test Tid\">>\n\n---\n\n<<callout+ warning src:\"I am a Test Tid\">>\n\n<<callout+ warning src:\"TestTid\" mode:inline>>\n<<callout+ info src:\"TestTid\" mode:block>>\n\n<$macrocall $name=callout+ type=warning \nsrc=\"\"\"* Onex\n* Two\n\nThis is a test\n\nThis is another\n\n {{TestTid}}\n \n\"\"\"/>\n\n<style>\ndetails.callout .callout-content > p{\n\n}\n</style>",
+    "tags": "",
+    "title": "New Tiddler 3",
+    "modified": "20221227124106324",
+    "type": "text/vnd.tiddlywiki",
+    "revision": "8",
+    "bag": "default"
+}

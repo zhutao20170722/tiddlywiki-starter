@@ -1,0 +1,8 @@
+created: 20200322054017618
+modified: 20210501205545545
+title: $:/config/FileSystemPaths
+type: text/vnd.tiddlywiki
+
+[is[system]!has[draft.of]removeprefix[$:/]addprefix[system/]]
+
+[is[draft]search-replace:g:regexp[/|\\],[_]addprefix[drafts/]]

@@ -1,0 +1,30 @@
+created: 20200323200849558
+modified: 20221226174204063
+title: First Read This
+type: text/vnd.tiddlywiki
+
+''How to prepare documentation?''
+
+* every tiddler for documentation shall be tagged with `doc` no matter what it is
+* to export the whole documentation just export <<tag doc>>
+* use the [[Shiraz Callout Tutorial]] to arrange the docs
+* using [[Contents]] sidebar tab is encouraged
+* the best example is Shiraz plugin
+* the `info` tag is only used for making the first page instructions, do not use it anywhere else.
+* the `tutorial` tag is used to create tutorial parts
+* the tag `advanced` is used for advanced examples and specific use cases
+* //Note i//: The [[Plugin Data]] defines some variables which are used in documentation tiddlers like plugin name, url, etc. Make sure to set correct data in it!
+* //Note ii//: The Sidebar > Favorites > Tutorial tiddlers, contains all tiddlers related to plugin documentation, open one by one and make sure correct data have been given.
+
+''Syncer settings''
+
+* the file system paths are set using [[$:/config/FileSystemPaths]]
+* the [[$:/config/PublishFilter]] that allows the saving filter to be customized via a global variable
+* the [[$:/config/FileSystemExtensions]] is used to save the correct `plugin.info` into the disk
+** The `plugin.info` can be created and updated from plugin tiddler or from sidebar tab under More > Plugin Sources > add plugin.info
+
+''Produce new release''
+
+* The setting for new release is found in [[$:/plugins/TheDiveO/ThirdFlow/ui/ControlPanel/ThirdFlow/Release]]
+* You can export extra item using additional plugin tiddlers
+* You can exclude tiddlers from demo (index.html) by tagging with `exclude`

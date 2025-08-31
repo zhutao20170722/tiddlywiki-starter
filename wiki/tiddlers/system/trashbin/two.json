@@ -1,0 +1,11 @@
+{
+    "title": "two",
+    "caption": "Tutorial Two",
+    "created": "20200312100711970",
+    "modified": "20220729121154728",
+    "tags": "Contents doc tutorial",
+    "type": "text/vnd.tiddlywiki",
+    "text": "<<tabs tabsList:\"[tag[two]tag[doc]!has[draft.of]]\" default:\"??/???\" class:\"tc-horizontal\" template:\"$:/tabs/tabTemplate\" explicitState:\"$:/state/tab-one\">>",
+    "revision": "0",
+    "bag": "default"
+}

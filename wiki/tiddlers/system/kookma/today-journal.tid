@@ -1,0 +1,12 @@
+created: 20220728100052730
+modified: 20220728105346822
+tags: 
+title: $:/kookma/today-journal
+type: text/vnd.tiddlywiki
+
+\define btn-actions()
+<$list filter="[<today-journal>is[tiddler]]" emptyMessage={{$:/core/ui/Actions/new-journal}}><$action-navigate $to=<<currentTiddler>>$scroll=yes/></$list>
+\end
+<$let today-journal=<<now format:"DDth MMM YYYY">> >
+<$button actions=<<btn-actions>> class="tc-btn-invisible tc-tiddlylink"><$text text=<<today-journal>>/></$button>
+</$let>

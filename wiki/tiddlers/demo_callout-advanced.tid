@@ -1,0 +1,57 @@
+caption: Alert advanced usage
+created: 20181208192049860
+creator: Mohammad
+modified: 20221227040313540
+tags: doc
+title: demo/callout-advanced
+type: text/vnd.tiddlywiki
+
+!Callout macros and class attribute
+
+Callout macro has a `class` attribute lets pass extra css classes to customize it.  Any CSS relevant classes can be used, but mostly customized classes are used for this purpose. In Shiraz 2.0+ these classes are courtesy from Bootstrap and can be found in Shiraz `demo/bootstrap-classes`.
+
+!! Examples i
+See below examples. Few classes like text color, element width, and text styling are used here!
+
+```
+<<callout note src:"text-primary" class:"text-primary">>
+<<callout quote src:"text-secondary" class:"text-secondary">>
+<<callout question src:"text-success" class:"text-success">>
+<<callout todo src:"text-info" class:"text-info">>
+<<callout error src:"text-danger" class:"text-danger">>
+<<callout warning src:"text-warning" class:"text-warning">>
+<<callout tip src:"text-info" class:"text-info">>
+```
+<<callout note src:"text-primary" class:"text-primary">>
+<<callout quote src:"text-secondary" class:"text-secondary">>
+<<callout question src:"text-success" class:"text-success">>
+<<callout todo src:"text-info" class:"text-info">>
+<<callout error src:"text-danger" class:"text-danger">>
+<<callout warning src:"text-warning" class:"text-warning">>
+<<callout tip src:"text-info" class:"text-info">>
+
+
+!Examples ii
+
+Here the class `text-` e.g. `text-uppercase` is used to create callouts with text styling.
+
+```
+<<callout note src:"text-primary" class:"text-uppercase">>
+```
+
+<<callout note src:"A callout with uppercase text" class:"text-uppercase">>
+
+
+
+!!Examples iii
+
+Here `bg-transparent` class is used to create callouts with colored text and borders and no background.
+
+```
+<$macrocall $name="callout" type="info" src=<<.lorem>> class="bg-transparent text-info"/>
+<$macrocall $name="callout" type="danger" src=<<.lorem>> class="bg-transparent"/>
+```
+
+<$macrocall $name="callout" type="info" src=<<.lorem>> class="bg-transparent text-info"/>
+<$macrocall $name="callout" type="danger" src=<<.lorem>> class="bg-transparent text-danger"/>
+

@@ -1,0 +1,7 @@
+caption: Syncer settings
+created: 20201210113332948
+list: $:/config/PublishFilter $:/config/FileSystemPaths $:/config/FileSystemExtensions
+modified: 20211024055819856
+tags: $:/tags/Favorites/Folder
+title: $:/favorites/folder-003
+type: text/vnd.tiddlywiki
