@@ -8,7 +8,7 @@ on:
     - cron: "0 10 * * *"  # optional daily build (UTC)
 
 permissions:
-  contents: write   # 让 GITHUB_TOKEN 可写 gh-pages
+  contents: write   # 让 GITHUB_TOKEN 有写 gh-pages 的权限
 
 jobs:
   build-deploy:
@@ -42,19 +42,30 @@ jobs:
           publish_dir: output
           publish_branch: gh-pages
 
-      # ---- OneDrive 镜像（可选）----
+      # --- 先检测 Secret 是否存在（不能直接在 if 里用 secrets）---
+      - name: Detect RCLONE secret
+        id: rclone_flag
+        env:
+          RCLONE_CONF_BASE64: ${{ secrets.RCLONE_CONF_BASE64 }}
+        run: |
+          if [ -n "$RCLONE_CONF_BASE64" ]; then
+            echo "present=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "present=false" >> "$GITHUB_OUTPUT"
+          fi
+
       - name: Setup rclone (optional OneDrive mirror)
-        if: ${{ secrets.RCLONE_CONF_BASE64 != '' }}
+        if: steps.rclone_flag.outputs.present == 'true'
         env:
           RCLONE_CONF_BASE64: ${{ secrets.RCLONE_CONF_BASE64 }}
         run: |
           sudo -n apt-get update
           sudo -n apt-get install -y rclone
           mkdir -p ~/.config/rclone
-          echo "${RCLONE_CONF_BASE64}" | base64 -d > ~/.config/rclone/rclone.conf
+          echo "$RCLONE_CONF_BASE64" | base64 -d > ~/.config/rclone/rclone.conf
 
       - name: Copy to OneDrive
-        if: ${{ secrets.RCLONE_CONF_BASE64 != '' }}
+        if: steps.rclone_flag.outputs.present == 'true'
         run: |
           rclone mkdir onedrive:tiddlywiki
           rclone copy output/index.html onedrive:tiddlywiki -v
