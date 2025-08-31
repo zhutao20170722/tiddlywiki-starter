@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "build": "tiddlywiki wiki --build index --output ../output",
+    "build": "tiddlywiki wiki --output ./output --build index",
     "serve": "tiddlywiki wiki --listen host=0.0.0.0 port=8080",
     "clean": "rm -rf ./output/*"
   },
