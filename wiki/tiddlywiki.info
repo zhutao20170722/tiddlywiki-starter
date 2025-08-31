@@ -1,0 +1,19 @@
+{
+  "description": "Learning & Research Wiki",
+  "plugins": [
+    "tiddlywiki/tiddlyweb",
+    "tiddlywiki/filesystem"
+  ],
+  "themes": [
+    "tiddlywiki/vanilla",
+    "tiddlywiki/snowwhite"
+  ],
+  "build": {
+    "index": [
+      "--rendertiddler",
+      "$:/core/save/all",
+      "output/index.html",
+      "text/plain"
+    ]
+  }
+}

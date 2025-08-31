@@ -1,0 +1,52 @@
+name: Build & Deploy TiddlyWiki
+on:
+  push:
+    branches: [ "main" ]
+  workflow_dispatch: {}
+  schedule:
+    - cron: "0 10 * * *"  # optional daily build (UTC)
+
+jobs:
+  build-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Install TiddlyWiki
+        run: npm i -g tiddlywiki
+
+      - name: Build single-file index.html
+        run: npm run build
+
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: site
+          path: output/index.html
+
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: output
+          publish_branch: gh-pages
+
+      - name: Setup rclone (optional OneDrive mirror)
+        if: ${{ secrets.RCLONE_CONF_BASE64 != '' }}
+        run: |
+          sudo -n apt-get update
+          sudo -n apt-get install -y rclone
+          mkdir -p ~/.config/rclone
+          echo "${{ secrets.RCLONE_CONF_BASE64 }}" | base64 -d > ~/.config/rclone/rclone.conf
+
+      - name: Copy to OneDrive
+        if: ${{ secrets.RCLONE_CONF_BASE64 != '' }}
+        run: |
+          rclone mkdir onedrive:tiddlywiki
+          rclone copy output/index.html onedrive:tiddlywiki -v

@@ -1,0 +1,11 @@
+created: 20250831T000000Z
+modified: 20250831T000000Z
+title: Weekly Review
+tags: 复盘
+type: text/vnd.tiddlywiki
+
+- New this week:
+<<list-links "[created[day[-7]!now]sort[created]]">>
+
+- Updated this week:
+<<list-links "[modified[day[-7]!now]sort[modified]]">>

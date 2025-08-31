@@ -1,0 +1,11 @@
+{
+  "name": "tiddlywiki-starter",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "build": "tiddlywiki wiki --build index",
+    "serve": "tiddlywiki wiki --listen host=0.0.0.0 port=8080",
+    "clean": "rm -rf ./output/*"
+  },
+  "devDependencies": {}
+}

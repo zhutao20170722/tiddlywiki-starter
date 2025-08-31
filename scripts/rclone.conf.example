@@ -1,0 +1,5 @@
+# Save your real rclone.conf locally, then base64-encode and store as RCLONE_CONF_BASE64 secret.
+[onedrive]
+type = onedrive
+drive_type = personal
+token = {"access_token":"...","refresh_token":"...","expiry":"..."}
